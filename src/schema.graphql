@@ -1,0 +1,26 @@
+type Query {
+ getPlanets: [PlanetType!]!
+ getVehicles: [VehicleType!]!
+}
+
+type Mutation {
+ findFalconPlanet(planets: [String!]!, vehicles: [String!]!): ResponseType!
+}
+
+type PlanetType {
+ name: String!
+ distance: Int!
+}
+
+type VehicleType {
+ name: String!
+ totalNumber: Int!
+ maxDistance: Int!
+ speed: Int!
+}
+
+type ResponseType {
+ planetName: String
+ status: String
+ error: String
+}
