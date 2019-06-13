@@ -10,4 +10,4 @@ const server = new GraphQLServer({
 })
 
 // eslint-disable-next-line
-server.start(() => console.log(`Server is running on http://localhost:4000`))
+server.start({ port: 4001 },() => console.log(`Server is running on http://localhost:4001`))
