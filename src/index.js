@@ -9,7 +9,7 @@ const server = new GraphQLServer({
   context: ({ request }) => ({ api, ...request })
 })
 
-if (process.env === 'development') {
+if (process.env.ENV === 'development') {
   // eslint-disable-next-line
   server.start({ port: 4001 }, () => console.log(`Server is running on http://localhost:4001`))
 } else {

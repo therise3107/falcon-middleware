@@ -7,7 +7,7 @@ async function findFalconPlanet(_, args, context) {
   }
 
   const response = await context.api().findFalcon(body)
-  console.log('this is the response ', response)
+
   return response
 }
 
